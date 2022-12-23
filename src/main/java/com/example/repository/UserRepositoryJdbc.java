@@ -65,7 +65,7 @@ BeanPropertyRowMapper.newInstance(UserMaster.class),id);
 	@Override
 	public List<UserMaster> findByUserName(String userName) {
 		// TODO Auto-generated method stub
-		String s="SELECT * from userMaster WHERE userName=?"+userName;
+		String s="SELECT * from userMaster WHERE userName='"+userName+"'";
 		return jdbcTemplate.query(s, BeanPropertyRowMapper.newInstance(UserMaster.class));
 	}
 

@@ -42,7 +42,7 @@ public class UserMasterController {
 	  id) { return userService.deleteUserById(id); }
 	 
 
-	@GetMapping("/productById/{id}")
+	@GetMapping("/userById/{id}")
 	public UserMaster searchById(@PathVariable Long id) {
 		return userService.findById(id);
 	}
